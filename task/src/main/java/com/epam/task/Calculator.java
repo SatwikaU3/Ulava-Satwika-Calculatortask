@@ -1,24 +1,28 @@
 package com.epam.task;
-
+import java.util.*;
 public class Calculator {
 	
 
 	    public static void main(String[] args) {
-	        Scanner sc = new Scanner(System.in);
-	        int x = sc.nextInt();int a = sc.nextInt(); int b = sc.nextInt();
+	        @SuppressWarnings("resource")
+			Scanner sc = new Scanner(System.in);
+	        int x = sc.nextInt();
+	        int p = sc.nextInt();
+	        int q = sc.nextInt();
 	        switch (x){
 	            case 1:
-	                Add add = new Add();
-	                add.addition(a,b);
+	                Addition add = new Addition();
+	                add.addition(p,q);
 	            case 2:
-	                Subtract sub = new Subtract();
-	                sub.subtraction(a,b);
+	                Substract sub = new Substract();
+	                sub.subtraction(p,q);
 	            case 3:
-	                Multiply mul = new Multiply();
-	                mul.multi(a,b);
+	                Multiplication mul = new Multiplication();
+	                mul.multi(p,q);
 	            case 4:
-	                Divide div = new Divide();
-	                div.division(a,b);
+	                Division div = new Division();
+	                div.division(p,q);
 	        }
 	    }
+}
 
